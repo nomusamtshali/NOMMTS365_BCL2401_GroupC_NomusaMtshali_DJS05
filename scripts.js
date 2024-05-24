@@ -96,4 +96,40 @@ const initialState = {
     }
   };
   
+  // Create store
+  /**
+   * Creates a new store with the given reducer function.
+   * @param {Function} reducer - The reducer function.
+   * @returns {Object} The store object.
+   */
+  const createStore = (reducer) => {
+    let state;
+    const listeners = [];
   
+    /**
+     * Returns the current state.
+     * @returns {Object} The current state.
+     */
+    const getState = () => state;
+  
+    /**
+     * Dispatches an action to the store.
+     * @param {Object} action - The action object.
+     */
+    const dispatch = (action) => {
+      state = reducer(state, action);
+      listeners.forEach((listener) => listener());
+    };
+  
+    /**
+     * Subscribes a listener function to the store.
+     * @param {Function} listener - The listener function.
+     * @returns {Function} A function to unsubscribe the listener.
+     */
+    const subscribe = (listener) => {
+      listeners.push(listener);
+      return () => {
+        const index = listeners.indexOf(listener);
+        listeners.splice(index, 1);
+      };
+    };
