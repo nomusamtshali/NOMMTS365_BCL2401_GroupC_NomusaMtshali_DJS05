@@ -139,5 +139,14 @@ const initialState = {
   
     return { getState, dispatch, subscribe };
   };
+
+  // Initialize store
+  /**
+   * The store object.
+   * @type {Object}
+   */
+  const store = createStore(reducer);
+  
+ 
   
   
