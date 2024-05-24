@@ -155,4 +155,30 @@ const initialState = {
   store.subscribe(() => {
     console.log("State:", store.getState());
   });
+
+  // Log the initial state
+  /**
+   * Logs initial state to the console.
+   */
+  console.log("Initial State:", store.getState());
+  
+  // Dispatch ADD actions to set state to count: 2
+  /**
+   * Dispatches ADD actions to the store to set the state to count: 2.
+   */
+  store.dispatch(add(1)); // State: { count: 1 }
+  store.dispatch(add(1)); // State: { count: 2 }
+  
+  // Dispatch SUBTRACT action
+  /**
+   * Dispatches a SUBTRACT action to the store.
+   */
+  store.dispatch(subtract(1)); // State: { count: 1 }
+  
+  // Dispatch RESET action
+  /**
+   * Dispatches a RESET action to the store.
+   */
+  store.dispatch(reset()); // State: { count: 0 }
+  
   
