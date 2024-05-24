@@ -133,3 +133,11 @@ const initialState = {
         listeners.splice(index, 1);
       };
     };
+
+  // Initialize the state
+    dispatch({ type: "@@INIT" }); // type is set to "@@INIT" - custom action type used internally to signal store initialization.
+  
+    return { getState, dispatch, subscribe };
+  };
+  
+  
