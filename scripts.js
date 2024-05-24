@@ -72,4 +72,28 @@ const initialState = {
    */
   const subtract = (value) => ({ type: SUBTRACT, payload: value });
   
+  // Reducer
+  /**
+   * reducer function handles state changes based on actions.
+   * @param {Object} state - current state.
+   * @param {Object} action - action object.
+   * @returns {Object} - the new state.
+   */
+  const reducer = (state = initialState, action) => {
+    switch (action.type) {
+      case INCREMENT:
+        return { ...state, count: state.count + 1 };
+      case DECREMENT:
+        return { ...state, count: state.count - 1 };
+      case RESET:
+        return { ...state, count: 0 };
+      case ADD:
+        return { ...state, count: state.count + action.payload };
+      case SUBTRACT:
+        return { ...state, count: state.count - action.payload };
+      default:
+        return state;
+    }
+  };
+  
   
