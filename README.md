@@ -1,12 +1,9 @@
 # DJS05 Project Brief: Building a Redux-Inspired Store for a Tally App
 
-In this challenge, you will venture into the realm of state management by constructing a Redux-inspired store to manage the state of a simple Tally App. Your primary goal is to manage the app's state changes efficiently, focusing on core functionalities like incrementing, decrementing, and resetting a counter. Instead of rendering changes on the UI, you'll subscribe to state updates and log them to the console, highlighting the power of state management in applications.
+# Project Brief
+- In this challenge, I ventured into the realm of state management by constructing a Redux-inspired store to manage the state of a simple Tally App. My primary goal was to manage the app's state changes efficiently, focusing on core functionalities like incrementing, decrementing, and resetting a counter. Instead of rendering changes on the UI, I had to subscribe to state updates and log them to the console, highlighting the power of state management in applications.
 
-## Objective
-Create a minimalistic, Redux-inspired store to manage and log the state of a counting Tally App. Your implementation will not involve UI rendering; instead, it will use console logs to demonstrate state management effectively.
-
-Observer Pattern resource from Refactoring Guru: https://refactoring.guru/design-patterns/observer
-
+# Project Overview
 ## User Stories (Gherkin Syntax)
 Your challenge will encompass the following scenarios, tested through your store's implementation:
 
@@ -44,26 +41,31 @@ AND the browser console is open
 THEN the state should display a count of 0
 ```
 
-## Requirements
-- **Implement a Global Store**: Create a Redux-inspired store that holds the state of the tally counter. The store should have the ability to dispatch actions and subscribe to state changes.
-- **State Management Functions**:
+# Elements Included 
+- A Global Store - a Redux-inspired store that holds the state of the tally counter. 
+- State Management Functions:
   - **getState**: Returns the current state.
   - **dispatch**: Takes an action (e.g., ADD, SUBTRACT, RESET) and updates the state accordingly.
   - **subscribe**: Accepts a function that gets called whenever the state changes. This function should log the new state to the console.
-- **No UI Rendering**: This challenge focuses on state management without the complexity of UI rendering. All state changes should be observable through console logs.
-- **Functional Programming Principles**: Draw upon functional programming concepts as illustrated in the reference videos. While Redux is the inspiration, you're encouraged to apply these principles creatively in your implementation.
+- No UI Rendering
+- Functional Programming Principles
 
-## Submission Guidelines
-Your submission should consist of a JavaScript file(s) that encapsulate your Redux-inspired store and the logic for dispatching actions and subscribing to changes. Include a README.md file explaining:
-- How to run your code.
-- A brief overview of your approach.
-- Any challenges you faced and how you overcame them.
+# Reflections 
+## Areas of Mastery
+- Gherkin Syntax.
 
-Ensure your code is well-commented and adheres to best practices for readability and maintainability.
+## Challenges faced 
+- Understanding Redux concepts - they're quite difficult at this point but I'm pretty sure if I get to read more on it and practice more redux stores, I'll definitely get them.
+- Managing state updates.
 
-## Evaluation Criteria
-- **Correctness**: Your implementation should correctly handle the scenarios as outlined in the user stories.
-- **Code Quality**: Use of functional programming principles, clear naming conventions, and code organization.
-- **Documentation**: Clarity of your approach and reflections in the README.md.
+## Areas of Improvement
+- Handling different action types.
 
-This challenge is an excellent opportunity to demonstrate your understanding of state management concepts and functional programming principles. Good luck!
+# How to run my code
+1. Clone this repository.
+2. Open a terminal in the project directory.
+3. Run node scripts.js to start the application or run Quokka.
+4. Observe the output in the terminal.
+
+# Overall Learning Experience
+- This project/challenge was a tough yet a good opportunity to demonstrate my understanding of state management concepts and functional programming principles. I found it challenging to understand Redux concepts and manage state updates, but I believe that with more practice and reading, I will become more comfortable with these concepts. I also identified areas for improvement in handling different action types. Overall, this project was a valuable learning experience that allowed me to apply my knowledge of state management and functional programming principles."
