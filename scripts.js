@@ -38,5 +38,38 @@ const initialState = {
    * @type {string}
    */
   const SUBTRACT = "SUBTRACT";
+
+  // Action creators
+  /**
+   * Increments the count by 1.
+   * @returns {Object} The action object.
+   */
+  const increment = () => ({ type: INCREMENT });
+  
+  /**
+   * Decrements the count by 1.
+   * @returns {Object} The action object.
+   */
+  const decrement = () => ({ type: DECREMENT });
+  
+  /**
+   * Resets the count to 0.
+   * @returns {Object} The action object.
+   */
+  const reset = () => ({ type: RESET });
+  
+  /**
+   * Adds a value to the count.
+   * @param {number} value - The value to add.
+   * @returns {Object} The action object.
+   */
+  const add = (value) => ({ type: ADD, payload: value });
+  
+  /**
+   * Subtracts a value from the count.
+   * @param {number} value - The value to subtract.
+   * @returns {Object} The action object.
+   */
+  const subtract = (value) => ({ type: SUBTRACT, payload: value });
   
   
