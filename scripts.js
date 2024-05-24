@@ -147,6 +147,12 @@ const initialState = {
    */
   const store = createStore(reducer);
   
- 
-  
+ // Subscribe to store changes
+  /**
+   * Subscribes a listener function to the store.
+   * @param {Function} listener - The listener function.
+   */
+  store.subscribe(() => {
+    console.log("State:", store.getState());
+  });
   
